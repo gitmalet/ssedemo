@@ -3,7 +3,7 @@ from pathlib import Path
 
 from fastapi import FastAPI
 
-from crypto_util import *
+from src.crypto_util import *
 
 app = FastAPI()
 
