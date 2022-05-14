@@ -37,3 +37,17 @@ docker run --rm -p 8080:80 ssedemo
 ```
 
 The API should be reachable under <http://127.0.0.1:8080> with automatic API documentation under <http://127.0.0.1:8080/docs>
+
+## Running tests inside a Docker Container
+
+You can run the tests in a special container that can be built from the same Dockerfile.
+
+* Build the container under the name `ssedemo-test`:
+```bash
+docker build -t ssedemo-test --target=test .
+```
+
+* Run the container exposing the service under port 8080
+```
+docker run --rm ssedemo-test
+```
