@@ -6,6 +6,12 @@ The data uploaded via the API is encrypted in memory and decrypted when the data
 
 The project uses [FastAPI](https://github.com/tiangolo/fastapi) to implement the API and cryptographic primitives from [PyNaCl](https://github.com/pyca/pynacl/).
 
+- [Setup Development Environment](#setup-development-environment)
+- [Run SSE Demo (Docker)](#run-sse-demo--docker-)
+- [Run SSE Demo Tests (Docker)](#run-sse-demo-tests--docker-)
+- [Usage](#usage)
+- [FAQ](#faq)
+
 # Setup Development Environment
 
 You need a working python installation with virtual environment support (This needs an extra package on some Linux distributions).
@@ -88,4 +94,3 @@ Authentication and user management would be the next step to get a more usable a
 Key management besides better than storing the key on the file system next to the code would be great too.
 One could also try implementing early eviction of the cleartext values from memory such that a memory dump does, with high probability, not contain the decrypted values.
 There is currently no persistence in this demo and test coverage, error handling and deployment options could be improved as well.
-
